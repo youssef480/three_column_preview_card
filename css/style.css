@@ -1,0 +1,117 @@
+:root {
+    --pr-bright-orange: hsl(31, 77%, 52%);
+    --pr-dark-cyan: hsl(184, 100%, 22%);
+    --pr-v-dark-cyan: hsl(179, 100%, 13%);
+    --para-color: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%); 
+}
+
+*  {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
+}
+
+.cards-holder {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-holder .card {
+    height: 500px;
+    width: 300px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.cards-holder .card .card-text {
+   margin-top: -80px;
+}
+
+.cards-holder .card .card-text h3 {
+    color: var(--light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.cards-holder .card .card-text p {
+    color: var(--para-color);
+    line-height: 1.9;
+    font-size: 14.5px;
+}
+
+.cards-holder .card button {
+    background-color: var(--light-gray);
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    font-family: 'Lexend Deca', sans-serif;
+    cursor: pointer;
+}
+
+.cards-holder .card-one {
+    background-color: var(--pr-bright-orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.cards-holder .card-one button {
+    color: var(--pr-bright-orange);
+}
+
+.cards-holder .card-two {
+    background-color: var(--pr-dark-cyan);
+}
+
+.cards-holder .card-two button {
+    color: var(--pr-dark-cyan);
+}
+
+.cards-holder .card-three {
+    background-color: var(--pr-v-dark-cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cards-holder .card-three button {
+    color: var(--pr-v-dark-cyan);
+}
+
+@media(max-width: 767px) {
+    .cards-holder {
+        flex-direction: column;
+        height: auto;
+        margin: 10px 0;
+    }
+
+
+    .cards-holder .card-one {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .cards-holder .card-three {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+}
